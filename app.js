@@ -17,6 +17,8 @@ var user_role = require('./routes/userrole');
 var visualpermission = require ('./routes/visualpermission');
 var instituterouter = require ('./routes/getins');
 var event_listrouter = require ('./routes/event_list');
+// forget password
+var forgetpassRouter = require ('./routes/forgetpass');
 
 
 var app = express();
@@ -56,6 +58,9 @@ app.use('/visualpermission', visualpermission);
 app.use('/getins', instituterouter);
 app.use('/event_list', event_listrouter);
 app.use('/event_list/:year', event_listrouter);
+
+// forget password
+app.use('/forgetpass', forgetpassRouter);
 
 // instituterouter
 
